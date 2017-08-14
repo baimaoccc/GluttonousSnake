@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/layer.css">
+	<link rel="stylesheet" href="css/snake.css">
+	<title>贪吃蛇</title>
+</head>
+<body>
+<audio src="src/music.mp3" autoplay loop></audio>
+<section class="layer_notice">
+	<p>方向键 ↑ ↓ ← → 开始游戏</p>
+	<p>空格键 space 暂停/继续游戏</p>
+</section>
+
+<section id="scoreSec">
+	<span>分数：<i id="game_score">0</i>&#x3000;分</span>&#x3000;&#x3000;
+	<span>当前等级：<i id="game_level">1</i>&#x3000;级</span>
+</section>
+
+
+
+<script src="libs/jquery.js"></script>
+<script src="libs/layer/layer.js"></script>
+<script src="js/snake.js"></script>
+<script>
+    var snake;
+    var food;
+    var timer;
+    var map;
+    var sum = 0;
+    var game;
+
+    window.onload = function () {
+        layer.open({
+            type: 1,
+            shade: false,
+            title: '小tips', //不显示标题
+	        backgroundColor:'lightgoldenrodyellow',
+            content: $('.layer_notice'), //捕获的元素，注意：最好该指定的元素要存放在body最外层，否则可能被其它的相对元素所影响
+            cancel: function(){
+                $('.layer_notice').css('opacity','0');
+                layer.msg('欢迎开始游戏', {time: 1000, icon:6});
+
+            }
+        });
+        game = new Game(1, 400);
+        game.initGame(400);
+    }
+</script>
+</body>
+</html>

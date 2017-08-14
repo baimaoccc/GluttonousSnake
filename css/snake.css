@@ -1,0 +1,74 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url("../img/a.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+.map {
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 350px);
+
+    background-color: #bfbfbf;
+}
+
+.food {
+    position: absolute;
+    background-color: #ff8e7b;
+}
+
+.snake_head {
+    position: absolute;
+    background-color: #99A3FF;
+}
+
+.snake_body {
+    position: absolute;
+    background-color: #ffb3de;
+}
+
+span {
+    color: white;
+    font-size: 16px;
+}
+
+i {
+    color: indianred;
+    font-size: 20px;
+}
+
+#scoreSec {
+    width: 100%;
+    height: 30px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    opacity: 0.2;
+    background-color: black;
+    z-index: 100;
+    text-align: center;
+}
+.layer_notice {
+    width: 300px;
+    height: 100px;
+    text-align: center;
+}
+.layer_notice p {
+    font-size: 14px;
+    text-align: center;
+}
+
+@keyframes lightning {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
